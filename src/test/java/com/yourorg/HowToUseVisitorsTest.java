@@ -27,8 +27,8 @@ public class HowToUseVisitorsTest implements RewriteTest {
                   """,
             """
                     class Test {
-                        void theAnswerToLifeUniverseAndEverything() {
-                            return 42;
+                        int theAnswerToLifeUniverseAndEverything() {
+                            return 21+21;
                         }
                     }
                   """
