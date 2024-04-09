@@ -23,8 +23,8 @@ public class HowToUseVisitors extends Recipe {
             @Override
             public J.MethodDeclaration visitMethodDeclaration(J.MethodDeclaration method, ExecutionContext executionContext) {
                 if(method.getSimpleName().equals("test") && method.getMethodType() != null) {
-                    return method.withName(method.getName().withSimpleName("theAnswerToLifeUniverseAndEverything"));
-
+                    return method.withName(method.getName().withSimpleName("theAnswerToLifeUniverseAndEverything"))
+                    .withMethodType(method.getMethodType().withName("theAnswerToLifeUniverseAndEverything"));
                 }
                 return super.visitMethodDeclaration(method, executionContext);
             }
